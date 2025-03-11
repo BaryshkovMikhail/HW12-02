@@ -44,7 +44,7 @@ CREATE USER 'sys_temp'@'localhost' IDENTIFIED BY 'password';
 SELECT user FROM mysql.user;
 ```
 
-<img src = "img/img1.png" width = 100%>
+<img src = "img/img1.png" width = 40%>
 
 1.4.
 
@@ -59,6 +59,14 @@ SHOW GRANTS FOR 'sys_temp'@'localhost';
 ```
 
 <img src = "img/img2.png" width = 100%>
+
+1.6.
+
+В заданиие оишбка в имени пользователя. В задании пример с пользователем 'sys_test'@'localhost' , а надо 'sys_temp'@'localhost'
+
+```sql
+ALTER USER 'sys_temp'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password';
+```
 
 1.8.
 
