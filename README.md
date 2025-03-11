@@ -32,7 +32,13 @@ ALTER USER 'sys_test'@'localhost' IDENTIFIED WITH mysql_native_password BY 'pass
 
 ## Решение 1
 
-1.3 
+1.2.
+
+```sql
+CREATE USER 'sys_temp'@'localhost' IDENTIFIED BY 'password';
+```
+
+1.3.
 
 ```sql
 SELECT user FROM mysql.user;
@@ -40,6 +46,23 @@ SELECT user FROM mysql.user;
 
 <img src = "img/img1.png" width = 100%>
 
+1.4.
+
+```sql
+GRANT ALL PRIVILEGES ON *.* TO 'sys_temp'@'localhost';
+```
+
+1.5.
+
+```sql
+SHOW GRANTS FOR 'sys_temp'@'localhost';
+```
+
+<img src = "img/img2.png" width = 100%>
+
+1.8.
+
+<img src = "img/img3.png" width = 100%>
 
 ## Задание 2
 
